@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Portfolio Design System - Terminal & Modern UI */
+
+@layer base {
+  :root {
+    /* Core Colors */
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    /* Brand Colors */
+    --primary: 210 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 210 100% 60%;
+    
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    
+    --accent: 156 100% 50%;
+    --accent-foreground: 0 0% 100%;
+    --accent-glow: 156 100% 60%;
+
+    /* Terminal Colors */
+    --terminal-bg: 220 13% 8%;
+    --terminal-fg: 120 100% 85%;
+    --terminal-prompt: 60 100% 70%;
+    --terminal-command: 0 0% 100%;
+    --terminal-error: 0 84.2% 60.2%;
+    --terminal-success: 120 100% 50%;
+    --terminal-border: 120 100% 25%;
+
+    /* Status Colors */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    /* Borders & Inputs */
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 210 100% 50%;
+    --radius: 0.75rem;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--accent-glow)));
+    --gradient-terminal: linear-gradient(135deg, hsl(var(--terminal-bg)), hsl(220 13% 12%));
+    --gradient-modern: linear-gradient(135deg, hsl(var(--background)), hsl(210 40% 98%));
+
+    /* Shadows */
+    --shadow-terminal: 0 0 30px hsl(var(--terminal-border) / 0.5);
+    --shadow-modern: 0 10px 30px -10px hsl(var(--primary) / 0.2);
+    --shadow-glow: 0 0 40px hsl(var(--accent) / 0.3));
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+  }
+
+  /* Terminal Cursor Animation */
+  .terminal-cursor {
+    animation: blink 1s infinite;
+  }
+
+  @keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+  }
+
+  /* Terminal Scrollbar */
+  .terminal-scrollbar::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .terminal-scrollbar::-webkit-scrollbar-track {
+    background: hsl(var(--terminal-bg));
+  }
+
+  .terminal-scrollbar::-webkit-scrollbar-thumb {
+    background: hsl(var(--terminal-border));
+    border-radius: 4px;
+  }
+
+  .terminal-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--terminal-fg) / 0.5);
+  }
+}
+
+@layer components {
+  /* Terminal Components */
+  .terminal-container {
+    @apply bg-gradient-to-br from-terminal-bg to-terminal-bg/90 
+           border border-terminal-border rounded-lg
+           shadow-[0_0_30px_hsl(var(--terminal-border)/0.5)]
+           backdrop-blur-sm;
+  }
+
+  .terminal-header {
+    @apply flex items-center justify-between p-4 border-b border-terminal-border/50;
+  }
+
+  .terminal-controls {
+    @apply flex space-x-2;
+  }
+
+  .terminal-control-btn {
+    @apply w-3 h-3 rounded-full;
+  }
+
+  .terminal-close { @apply bg-red-500; }
+  .terminal-minimize { @apply bg-yellow-500; }
+  .terminal-maximize { @apply bg-green-500; }
+
+  .terminal-title {
+    @apply text-terminal-fg font-mono text-sm;
+  }
+
+  .terminal-body {
+    @apply p-4 h-96 overflow-y-auto terminal-scrollbar
+           font-mono text-sm leading-relaxed;
+  }
+
+  .terminal-line {
+    @apply flex items-start mb-2;
+  }
+
+  .terminal-prompt {
+    @apply text-terminal-prompt flex-shrink-0 mr-2;
+  }
+
+  .terminal-input {
+    @apply flex-1 bg-transparent outline-none text-terminal-command
+           caret-terminal-fg;
+  }
+
+  .terminal-output {
+    @apply text-terminal-fg whitespace-pre-wrap;
+  }
+
+  .terminal-error {
+    @apply text-terminal-error;
+  }
+
+  .terminal-success {
+    @apply text-terminal-success;
+  }
+
+  /* Modern UI Components */
+  .modern-section {
+    @apply py-20 px-6;
+  }
+
+  .modern-container {
+    @apply max-w-6xl mx-auto;
+  }
+
+  .modern-hero {
+    @apply bg-gradient-to-br from-background via-background to-accent/5
+           min-h-screen flex items-center justify-center;
+  }
+
+  .modern-card {
+    @apply bg-card/50 backdrop-blur-sm border border-border/50
+           rounded-xl shadow-modern hover:shadow-glow
+           transition-all duration-300 hover:-translate-y-1;
+  }
+
+  .modern-btn-primary {
+    @apply bg-gradient-to-r from-primary to-primary-glow
+           text-primary-foreground px-6 py-3 rounded-lg
+           font-semibold shadow-modern hover:shadow-glow
+           transition-all duration-300 hover:scale-105
+           hover:shadow-lg;
+  }
+
+  .modern-btn-accent {
+    @apply bg-gradient-to-r from-accent to-accent-glow
+           text-accent-foreground px-6 py-3 rounded-lg
+           font-semibold shadow-modern hover:shadow-glow
+           transition-all duration-300 hover:scale-105
+           hover:shadow-lg;
+  }
+
+  .mode-toggle {
+    @apply fixed top-6 right-6 z-50
+           bg-card/80 backdrop-blur-sm border border-border/50
+           rounded-full p-3 shadow-modern hover:shadow-glow
+           transition-all duration-300 hover:scale-110;
+  }
+}
