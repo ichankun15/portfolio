@@ -17,9 +17,16 @@ export interface Experience {
   tech: string[];
 }
 
+export interface SkillItem {
+  name: string;
+  icon: string;
+}
+
 export interface Skill {
   category: string;
-  items: string[];
+  items: SkillItem[];
+  categoryIcon: string;
+  gradient: string;
 }
 
 export interface PortfolioData {
@@ -42,120 +49,6 @@ export interface PortfolioData {
     gpa?: string;
   }[];
 }
-
-// export const portfolioData: PortfolioData = {
-//   name: "Ichan Villafuerte",
-//   title: "Full Stack Developer",
-//   email: "ichan.villafuerte@portfolio.dev",
-//   phone: "+1 (555) 123-4567",
-//   location: "Ortigas, Pasig City",
-//   website: "https://ichanvillafuerte.dev",
-//   github: "https://github.com/ichanvillafuerte",
-//   linkedin: "https://linkedin.com/in/ichanvillafuerte",
-//   bio: "Passionate full-stack developer with 2 years of experience building scalable web applications. I love creating beautiful, intuitive user interfaces and robust backend systems. Always excited to learn new technologies and solve complex problems.",
-  
-//   projects: [
-//     {
-//       id: "ecommerce-platform",
-//       title: "E-Commerce Platform",
-//       description: "A full-stack e-commerce platform with React, Node.js, and PostgreSQL. Features include user authentication, payment processing, inventory management, and admin dashboard.",
-//       tech: ["React", "TypeScript", "Node.js", "Express", "PostgreSQL", "Stripe API", "Redis"],
-//       github: "https://github.com/ichanvillafuerte/ecommerce-platform",
-//       demo: "https://ecommerce-demo.ichanvillafuerte.dev"
-//     },
-//     {
-//       id: "task-manager",
-//       title: "Collaborative Task Manager",
-//       description: "Real-time collaborative task management application with drag-and-drop functionality, team workspaces, and live notifications.",
-//       tech: ["React", "Socket.io", "MongoDB", "Express", "Material-UI", "JWT"],
-//       github: "https://github.com/ichanvillafuerte/task-manager",
-//       demo: "https://tasks.ichanvillafuerte.dev"
-//     },
-//     {
-//       id: "weather-app",
-//       title: "Weather Forecast App",
-//       description: "Beautiful weather application with location-based forecasts, interactive maps, and weather alerts using modern design principles.",
-//       tech: ["React", "TypeScript", "OpenWeather API", "Mapbox", "Tailwind CSS"],
-//       github: "https://github.com/ichanvillafuerte/weather-app",
-//       demo: "https://weather.ichanvillafuerte.dev"
-//     }
-//   ],
-
-//   experience: [
-//     {
-//       id: "senior-dev",
-//       title: "Senior Full Stack Developer",
-//       company: "TechCorp Solutions",
-//       period: "2022 - Present",
-//       description: [
-//         "Lead development of microservices architecture serving 100k+ users",
-//         "Mentored junior developers and conducted code reviews",
-//         "Implemented CI/CD pipelines reducing deployment time by 60%",
-//         "Collaborated with design team to create responsive user interfaces"
-//       ],
-//       tech: ["React", "Node.js", "AWS", "Docker", "MongoDB", "TypeScript"]
-//     },
-//     {
-//       id: "fullstack-dev",
-//       title: "Full Stack Developer",
-//       company: "StartupXYZ",
-//       period: "2020 - 2022",
-//       description: [
-//         "Built and maintained web applications using React and Express",
-//         "Integrated third-party APIs and payment systems",
-//         "Optimized database queries improving performance by 40%",
-//         "Participated in agile development processes and sprint planning"
-//       ],
-//       tech: ["React", "Express", "PostgreSQL", "Git", "Jest", "Heroku"]
-//     },
-//     {
-//       id: "frontend-dev",
-//       title: "Frontend Developer",
-//       company: "DigitalAgency",
-//       period: "2019 - 2020",
-//       description: [
-//         "Developed responsive websites for diverse client portfolio",
-//         "Converted design mockups into pixel-perfect implementations",
-//         "Optimized site performance and accessibility standards",
-//         "Collaborated with designers and backend developers"
-//       ],
-//       tech: ["JavaScript", "HTML5", "CSS3", "SASS", "jQuery", "WordPress"]
-//     }
-//   ],
-
-//   skills: [
-//     {
-//       category: "Frontend",
-//       items: ["React", "TypeScript", "JavaScript", "HTML5", "CSS3", "Tailwind CSS", "Next.js", "Vue.js"]
-//     },
-//     {
-//       category: "Backend",
-//       items: ["Node.js", "Express", "Python", "Django", "PostgreSQL", "MongoDB", "Redis", "GraphQL"]
-//     },
-//     {
-//       category: "DevOps & Tools",
-//       items: ["AWS", "Docker", "Kubernetes", "Git", "Jenkins", "Linux", "Nginx", "Terraform"]
-//     },
-//     {
-//       category: "Design",
-//       items: ["Figma", "Adobe XD", "Photoshop", "UI/UX Design", "Responsive Design", "Accessibility"]
-//     }
-//   ],
-
-//   education: [
-//     {
-//       degree: "Bachelor of Science in Computer Engineering",
-//       school: "La Consolacion University Philippines",
-//       period: "2019 - 2023",
-//       gpa: "1.25/1.5"
-//     },
-//     {
-//       degree: "Full Stack Web Development Bootcamp",
-//       school: "General Assembly",
-//       period: "2023"
-//     }
-//   ]
-// };
 
 export const portfolioData: PortfolioData = {
   name: "Ichan Villafuerte",
@@ -270,35 +163,104 @@ export const portfolioData: PortfolioData = {
   skills: [
     {
       category: "Programming Languages",
-      items: ["C", "JavaScript", "Java", "Python"]
+      categoryIcon: "Code",
+      gradient: "from-blue-500 to-purple-600",
+      items: [
+        { name: "C", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" },
+        { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
+        { name: "Java", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" },
+        { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" }
+      ]
     },
     {
       category: "Web & Frameworks",
-      items: ["React", "Spring Boot", "Spring Microservices", "Django", "FastAPI", "Bootstrap", "REST API"]
+      categoryIcon: "Code",
+      gradient: "from-green-500 to-teal-600",
+      items: [
+        { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+        { name: "Spring Boot", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" },
+        { name: "Spring Microservices", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" },
+        { name: "Django", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" },
+        { name: "FastAPI", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" },
+        { name: "Bootstrap", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" },
+        { name: "REST API", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" }
+      ]
     },
     {
       category: "Databases",
-      items: ["MySQL", "PostgreSQL", "DynamoDB"]
+      categoryIcon: "Database",
+      gradient: "from-yellow-500 to-orange-600",
+      items: [
+        { name: "MySQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
+        { name: "PostgreSQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
+        { name: "DynamoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" }
+      ]
     },
     {
       category: "Cloud & DevOps",
-      items: ["AWS (Lambda, API Gateway, Cognito, S3, CloudWatch, Bedrock, SQS)", "Docker", "Serverless Framework", "WSL", "Firebase", "Google Colab"]
+      categoryIcon: "Cloud",
+      gradient: "from-purple-500 to-pink-600",
+      items: [
+        { name: "AWS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" },
+        { name: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
+        { name: "Serverless Framework", icon: "https://assets.serverless.com/logos/serverless-square-icon-text.png" },
+        { name: "WSL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain.svg" },
+        { name: "Firebase", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" },
+        { name: "Google Colab", icon: "https://colab.research.google.com/img/colab_favicon_256px.png" }
+      ]
     },
     {
       category: "Testing & QA",
-      items: ["Selenium", "Robot Framework", "Manual Testing", "Requirement Analysis", "Test Case Creation", "Bug Reporting", "Jira", "Confluence"]
+      categoryIcon: "TestTube",
+      gradient: "from-red-500 to-rose-600",
+      items: [
+        { name: "Selenium", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/selenium/selenium-original.svg" },
+        { name: "Robot Framework", icon: "https://robotframework.org/img/RF.svg" },
+        { name: "Manual Testing", icon: "https://cdn-icons-png.flaticon.com/512/1055/1055666.png" },
+        { name: "Requirement Analysis", icon: "https://cdn-icons-png.flaticon.com/512/3079/3079531.png" },
+        { name: "Test Case Creation", icon: "https://cdn-icons-png.flaticon.com/512/3652/3652191.png" },
+        { name: "Bug Reporting", icon: "https://cdn-icons-png.flaticon.com/512/1828/1828843.png" },
+        { name: "Jira", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg" },
+        { name: "Confluence", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/confluence/confluence-original.svg" }
+      ]
     },
     {
       category: "Version Control",
-      items: ["Git", "GitHub", "GitLab", "Tortoise SVN"]
+      categoryIcon: "GitBranch",
+      gradient: "from-indigo-500 to-blue-600",
+      items: [
+        { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
+        { name: "GitHub", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
+        { name: "GitLab", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg" },
+        { name: "Tortoise SVN", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/subversion/subversion-original.svg" }
+      ]
     },
     {
       category: "Design & Tools",
-      items: ["Figma", "Postman", "Swagger", "MySQL Workbench", "pgAdmin", "Bubble.io", "SMTP", "Redmine", "FastStone", "OpenProject"]
+      categoryIcon: "Wrench",
+      gradient: "from-teal-500 to-cyan-600",
+      items: [
+        { name: "Figma", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" },
+        { name: "Postman", icon: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" },
+        { name: "Swagger", icon: "https://static1.smartbear.co/swagger/media/assets/images/swagger_logo.svg" },
+        { name: "MySQL Workbench", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
+        { name: "pgAdmin", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
+        { name: "Bubble.io", icon: "https://cdn.worldvectorlogo.com/logos/bubble-io.svg" },
+        { name: "Redmine", icon: "https://logo.svgcdn.com/s/redmine.svg" },
+        { name: "FastStone", icon: "https://cdn-icons-png.flaticon.com/512/2991/2991110.png" },
+        { name: "OpenProject", icon: "https://www.openproject.org/assets/images/openproject_logo.png" }
+      ]
     },
     {
       category: "AI/ML",
-      items: ["TensorFlow", "Keras", "Mediapipe", "Scikit-Learn"]
+      categoryIcon: "Brain",
+      gradient: "from-orange-500 to-amber-600",
+      items: [
+        { name: "TensorFlow", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" },
+        { name: "Keras", icon: "https://upload.wikimedia.org/wikipedia/commons/a/ae/Keras_logo.svg" },
+        { name: "Mediapipe", icon: "https://mediapipe.dev/images/mediapipe_small.png" },
+        { name: "Scikit-Learn", icon: "https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" }
+      ]
     }
   ],
 

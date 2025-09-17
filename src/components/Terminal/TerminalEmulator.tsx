@@ -125,10 +125,13 @@ const TerminalEmulator: React.FC<TerminalEmulatorProps> = ({ onModeSwitch }) => 
           addLine('output', '─'.repeat(40));
           portfolioData.skills.forEach(skillGroup => {
             addLine('output', `${skillGroup.category}:`);
-            addLine('output', `  ${skillGroup.items.join(' • ')}`);
+            // Map each item to its name before joining
+            const skillNames = skillGroup.items.map(item => item.name);
+            addLine('output', `  ${skillNames.join(' • ')}`);
             addLine('output', '');
           });
         });
+
         break;
 
       case 'experience':
