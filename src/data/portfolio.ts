@@ -159,7 +159,7 @@ export const portfolioData: PortfolioData = {
       tech: ["Figma", "UAT Testing", "Manual QA"]
     }
   ],
-
+  // use devicon for icons
   skills: [
     {
       category: "Programming Languages",
