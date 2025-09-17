@@ -178,6 +178,10 @@ export const portfolioData: PortfolioData = {
       gradient: "from-green-500 to-teal-600",
       items: [
         { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+        { name: "Tailwind CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" },
+        { name: "HTML5", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
+        { name: "CSS3", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
+        { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
         { name: "Spring Boot", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" },
         { name: "Spring Microservices", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" },
         { name: "Django", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" },
@@ -217,8 +221,8 @@ export const portfolioData: PortfolioData = {
         { name: "Selenium", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/selenium/selenium-original.svg" },
         { name: "Robot Framework", icon: "https://robotframework.org/img/RF.svg" },
         { name: "Manual Testing", icon: "https://cdn-icons-png.flaticon.com/512/1055/1055666.png" },
-        { name: "Requirement Analysis", icon: "https://cdn-icons-png.flaticon.com/512/3079/3079531.png" },
-        { name: "Test Case Creation", icon: "https://cdn-icons-png.flaticon.com/512/3652/3652191.png" },
+        { name: "Requirement Analysis", icon: "" },
+        { name: "Test Case Creation", icon: "" },
         { name: "Bug Reporting", icon: "https://cdn-icons-png.flaticon.com/512/1828/1828843.png" },
         { name: "Jira", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg" },
         { name: "Confluence", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/confluence/confluence-original.svg" }
