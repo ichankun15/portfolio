@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import TerminalEmulator from '@/components/Terminal/TerminalEmulator';
 import ModernPortfolio from '@/components/ModernUI/ModernPortfolio';
 import ModeToggle from '@/components/ToggleUI/ModeToggle';
+import DarkMode from '@/components/ui/darkmode';
 
 const Index = () => {
   const [isTerminalMode, setIsTerminalMode] = useState(true);
@@ -22,8 +23,11 @@ const Index = () => {
   }, [isTransitioning]);
 
   return (
-    <div className="min-h-screen relative overflow-hidden">
-      {/* Mode Toggle Button */}
+    <div className="min-h-screen relative overflow-hidden transition-colors duration-300 bg-background">
+      {/* Dark Mode Toggle - Always visible in top-left */}
+      {!isTransitioning && <DarkMode />}
+      
+      {/* Mode Toggle Button - Positioned in top-right */}
       {!isTransitioning && (
         <div className="fixed top-6 right-6 z-50">
           <ModeToggle 
@@ -48,11 +52,11 @@ const Index = () => {
       {/* Main Content */}
       <div className={`transition-all duration-300 ${isTransitioning ? 'opacity-0 scale-95' : 'opacity-100 scale-100'}`}>
         {isTerminalMode ? (
-          <div className="min-h-screen bg-gradient-terminal flex items-center justify-center p-4">
-            <TerminalEmulator onModeSwitch={handleModeSwitch} />
+<div className="min-h-screen bg-gradient-terminal flex items-center justify-center p-4">
+          <TerminalEmulator onModeSwitch={handleModeSwitch} />
           </div>
         ) : (
-          <ModernPortfolio onModeSwitch={handleModeSwitch} />
+            <ModernPortfolio onModeSwitch={handleModeSwitch} />
         )}
       </div>
     </div>

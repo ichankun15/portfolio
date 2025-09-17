@@ -13,7 +13,8 @@ interface ModernPortfolioProps {
 
 const ModernPortfolio: React.FC<ModernPortfolioProps> = ({ onModeSwitch }) => {
   return (
-    <div className="min-h-screen bg-gradient-modern">
+    <div className="min-h-screen bg-gradient-to-br from-background via-background to-accent/5 text-foreground transition-colors duration-300">
+      {/* Pass onModeSwitch to HeroSection if it needs the toggle */}
       <HeroSection onModeSwitch={onModeSwitch} />
       <AboutSection />
       <ExperienceSection />
