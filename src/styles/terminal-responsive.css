@@ -1,0 +1,146 @@
+/* styles/terminal-responsive.css */
+
+/* Base terminal styles */
+.terminal-container {
+  font-family: 'Fira Code', 'Consolas', 'Monaco', 'Courier New', monospace;
+}
+
+/* Custom scrollbar for webkit browsers */
+.scrollbar-thin {
+  scrollbar-width: thin;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  @apply bg-gray-800;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  @apply bg-gray-600 rounded-full;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-500;
+}
+
+/* Terminal input focus styles */
+.terminal-input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Mobile optimizations */
+@media (max-width: 640px) {
+  /* Ensure terminal takes full width on mobile */
+  .terminal-container {
+    margin: 0.5rem;
+    width: calc(100% - 1rem);
+  }
+  
+  /* Adjust terminal body height for mobile */
+  .terminal-body {
+    max-height: 70vh;
+    min-height: 300px;
+  }
+  
+  /* Better touch targets for mobile */
+  .terminal-input {
+    font-size: 16px; /* Prevents zoom on iOS */
+    padding: 8px 0;
+    min-height: 24px;
+  }
+  
+  /* Optimize line spacing for mobile */
+  .terminal-line {
+    line-height: 1.4;
+    padding: 2px 8px;
+  }
+  
+  /* Make control buttons more touch-friendly */
+  .terminal-control-btn {
+    min-width: 12px;
+    min-height: 12px;
+  }
+}
+
+/* Tablet optimizations */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .terminal-body {
+    height: 400px;
+  }
+  
+  .terminal-input {
+    font-size: 14px;
+  }
+}
+
+/* Desktop optimizations */
+@media (min-width: 1025px) {
+  .terminal-body {
+    height: 500px;
+  }
+  
+  /* Add hover effects for desktop */
+  .terminal-control-btn:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+}
+
+/* Landscape mobile optimization */
+@media (max-width: 640px) and (orientation: landscape) {
+  .terminal-body {
+    height: 250px;
+    max-height: 60vh;
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .terminal-cursor {
+    transform: scale(0.9);
+  }
+}
+
+/* Dark mode specific enhancements */
+@media (prefers-color-scheme: dark) {
+  .terminal-container {
+    background-color: #0f1419;
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  .animate-pulse {
+    animation: none;
+  }
+  
+  .terminal-cursor {
+    animation: none;
+  }
+}
+
+/* Focus management for keyboard navigation */
+.terminal-input:focus-visible {
+  outline: 2px solid #10b981;
+  outline-offset: 2px;
+}
+
+/* Ensure text doesn't overflow on very small screens */
+@media (max-width: 320px) {
+  .terminal-line {
+    font-size: 11px;
+    padding: 1px 4px;
+  }
+  
+  .terminal-input {
+    font-size: 14px; /* Still 16px minimum for iOS */
+  }
+  
+  .terminal-prompt {
+    font-size: 11px;
+  }
+}
