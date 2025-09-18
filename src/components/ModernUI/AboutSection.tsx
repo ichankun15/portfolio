@@ -19,7 +19,7 @@ const AboutSection: React.FC = () => {
                 {portfolioData.bio}
               </p>
               <p className="text-lg leading-relaxed text-muted-foreground">
-                When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or enjoying a good cup of coffee while reading tech blogs.
+                {portfolioData.tagline}
               </p>
             </div>
             
@@ -34,19 +34,19 @@ const AboutSection: React.FC = () => {
                 </div>
                 <div className="flex justify-between items-center py-2 border-b border-border/30">
                   <span className="font-medium">Experience</span>
-                  <span className="text-muted-foreground">2 Years</span>
+                  <span className="text-muted-foreground">{portfolioData.years_exp}</span>
                 </div>
                 <div className="flex justify-between items-center py-2 border-b border-border/30">
                   <span className="font-medium">Projects Completed</span>
-                  <span className="text-muted-foreground">50+</span>
+                  <span className="text-muted-foreground">10+</span>
                 </div>
                 <div className="flex justify-between items-center py-2 border-b border-border/30">
                   <span className="font-medium">Coffee Consumed</span>
-                  <span className="text-muted-foreground">∞ Cups</span>
+                  <span className="text-muted-foreground">None</span>
                 </div>
                 <div className="flex justify-between items-center py-2">
                   <span className="font-medium">Favorite Tech</span>
-                  <span className="text-muted-foreground">React & TypeScript</span>
+                  <span className="text-muted-foreground">Python & React</span>
                 </div>
               </div>
             </div>

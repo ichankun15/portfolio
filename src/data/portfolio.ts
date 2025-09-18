@@ -46,6 +46,8 @@ export interface PortfolioData {
   github: string;
   linkedin: string;
   bio: string;
+  tagline: string;
+  years_exp: string;
   projects: Project[];
   experience: Experience[];
   skills: Skill[];
@@ -67,6 +69,8 @@ export const portfolioData: PortfolioData = {
   github: "https://github.com/ichankun15",
   linkedin: "https://www.linkedin.com/in/christian-villafuerte-573106282/",
   bio: "Software Engineer with hands-on experience in full-stack development (Java, Python, React, Spring Boot, Django, FastAPI). Skilled in building scalable web apps, designing RESTful APIs, and deploying cloud-based solutions on AWS. Strong foundation in SDLC, Agile, and QA, with recent experience in AI/ML and Generative AI projects.",
+  tagline: "When I'm not coding, I enjoy exploring new technologies, playing online games, and hitting the basketball court.",
+  years_exp: "2 years",
 
   projects: [
     {
@@ -87,12 +91,12 @@ export const portfolioData: PortfolioData = {
       description: "Java-based messaging application supporting both TCP and UDP protocols, with multithreading and socket programming for real-time communication.",
       tech: ["Java", "Socket Programming", "Multithreading"]
     },
-    {
-      id: "software-monitoring-tool",
-      title: "Software Monitoring Tool",
-      description: "Enterprise tool for monitoring software with CSV-driven database automation, ETL/data migration scripts, and updated UI components. Built under Agile Scrum methodology.",
-      tech: ["Python", "Django", "PostgreSQL", "Docker", "HTML", "CSS", "JavaScript", "Git", "OpenProject"]
-    },
+    // {
+    //   id: "software-monitoring-tool",
+    //   title: "Software Monitoring Tool",
+    //   description: "Enterprise tool for monitoring software with CSV-driven database automation, ETL/data migration scripts, and updated UI components. Built under Agile Scrum methodology.",
+    //   tech: ["Python", "Django", "PostgreSQL", "Docker", "HTML", "CSS", "JavaScript", "Git", "OpenProject"]
+    // },
     {
       id: "elearning-platform",
       title: "E-Learning Web Application",
