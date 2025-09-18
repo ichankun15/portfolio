@@ -19,29 +19,29 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onModeSwitch }) => {
         <div className="text-center">
           {/* Avatar placeholder */}
           {/* <div className="w-32 h-32 mx-auto mb-8 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center shadow-glow"> */}
-            {/* <span className="text-4xl font-bold text-white"> */}
-              {/* {portfolioData.name.split(' ').map(n => n[0]).join('')} */}
-            {/* </span> */}
+          {/* <span className="text-4xl font-bold text-white"> */}
+          {/* {portfolioData.name.split(' ').map(n => n[0]).join('')} */}
+          {/* </span> */}
           {/* </div> */}
 
           <h1 className="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent leading-tight">
             {portfolioData.name}
           </h1>
 
-          <p className="text-xl md:text-2xl text-muted-foreground mb-4 font-medium">
+          <p className="text-xl md:text-2xl text-muted-foreground mb-4 font-medium px-4 md:px-0">
             {portfolioData.title}
           </p>
 
-          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-sm md:text-lg text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed px-4 md:px-0">
             {portfolioData.location} • Building exceptional digital experiences
           </p>
 
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
+          <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-4 mb-12 px-4 sm:px-0">
             <Button
               onClick={onModeSwitch}
               variant="outline"
               size="lg"
-              className="modern-btn-primary group"
+              className="modern-btn-primary group w-full sm:w-auto"
             >
               <Terminal className="mr-2 h-5 w-5 group-hover:rotate-12 transition-transform" />
               Terminal Mode
@@ -51,8 +51,13 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onModeSwitch }) => {
               href="/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
+              className="w-full sm:w-auto"
             >
-              <Button variant="outline" size="lg" className="modern-btn-accent">
+              <Button
+                variant="outline"
+                size="lg"
+                className="modern-btn-accent w-full sm:w-auto"
+              >
                 <Download className="mr-2 h-5 w-5" />
                 Download Resume
               </Button>
