@@ -1,3 +1,10 @@
+import bugReportIcon from "../assets/icons/bugreport-icon.png";
+import faststoneIcon from "../assets/icons/faststone-icon.png";
+import redmineIcon from "../assets/icons/redmine-icon.png";
+import reqAnalysisIcon from "../assets/icons/requirement-analysis-icon.png";
+import serverlessIcon from "../assets/icons/serverless-icon.svg";
+import testCaseIcon from "../assets/icons/test-cases-creation-icon.png";
+
 export interface Project {
   id: string;
   title: string;
@@ -51,14 +58,14 @@ export interface PortfolioData {
 }
 
 export const portfolioData: PortfolioData = {
-  name: "Ichan Villafuerte",
+  name: "Ichan",
   title: "Software Engineer | Full Stack Developer",
   email: "1christian.villafuerte@gmail.com",
-  phone: "0906 645 4881",
+  phone: "09066454881",
   location: "Santo Niño, Plaridel, Bulacan 3004",
-  website: "https://ichanvillafuerte.dev", // keep if you have/plan one
-  github: "https://github.com/ichanvillafuerte", // update if you use another GitHub
-  linkedin: "https://linkedin.com/in/ichanvillafuerte",
+  website: "https://ichanvillafuerte.dev",
+  github: "https://github.com/ichankun15",
+  linkedin: "https://www.linkedin.com/in/christian-villafuerte-573106282/",
   bio: "Software Engineer with hands-on experience in full-stack development (Java, Python, React, Spring Boot, Django, FastAPI). Skilled in building scalable web apps, designing RESTful APIs, and deploying cloud-based solutions on AWS. Strong foundation in SDLC, Agile, and QA, with recent experience in AI/ML and Generative AI projects.",
 
   projects: [
@@ -112,7 +119,7 @@ export const portfolioData: PortfolioData = {
     },
     {
       id: "software-monitoring-tool",
-      title: "Software Developer (Client Project: Software Monitoring Tool)",
+      title: "Software Developer (Project: Software Monitoring Tool)",
       company: "Tsukiden Global Solutions Inc.",
       period: "2024",
       description: [
@@ -125,7 +132,7 @@ export const portfolioData: PortfolioData = {
     },
     {
       id: "travel-booking-app",
-      title: "QA Engineer (Client Project: Travel Booking App)",
+      title: "QA Engineer (Project: Travel Booking App)",
       company: "Tsukiden Global Solutions Inc.",
       period: "2024",
       description: [
@@ -159,7 +166,7 @@ export const portfolioData: PortfolioData = {
       tech: ["Figma", "UAT Testing", "Manual QA"]
     }
   ],
-  // use devicon for icons
+  // use devicon, svgrepo, freepik for icons
   skills: [
     {
       category: "Programming Languages",
@@ -177,16 +184,16 @@ export const portfolioData: PortfolioData = {
       categoryIcon: "Code",
       gradient: "from-green-500 to-teal-600",
       items: [
-        { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-        { name: "Tailwind CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" },
         { name: "HTML5", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
         { name: "CSS3", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
         { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
+        { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+        { name: "Tailwind CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" },
+        { name: "Bootstrap", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" },
         { name: "Spring Boot", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" },
         { name: "Spring Microservices", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" },
         { name: "Django", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" },
         { name: "FastAPI", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" },
-        { name: "Bootstrap", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" },
         { name: "REST API", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" }
       ]
     },
@@ -197,18 +204,18 @@ export const portfolioData: PortfolioData = {
       items: [
         { name: "MySQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
         { name: "PostgreSQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
-        { name: "DynamoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" }
+        { name: "DynamoDB - AWS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" }
       ]
     },
     {
-      category: "Cloud & DevOps",
+      category: "Cloud Platforms",
       categoryIcon: "Cloud",
       gradient: "from-purple-500 to-pink-600",
       items: [
         { name: "AWS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" },
         { name: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
-        { name: "Serverless Framework", icon: "https://assets.serverless.com/logos/serverless-square-icon-text.png" },
-        { name: "WSL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain.svg" },
+        { name: "Serverless Framework", icon: serverlessIcon },
+        { name: "Linux", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" },
         { name: "Firebase", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" },
         { name: "Google Colab", icon: "https://colab.research.google.com/img/colab_favicon_256px.png" }
       ]
@@ -221,9 +228,9 @@ export const portfolioData: PortfolioData = {
         { name: "Selenium", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/selenium/selenium-original.svg" },
         { name: "Robot Framework", icon: "https://robotframework.org/img/RF.svg" },
         { name: "Manual Testing", icon: "https://cdn-icons-png.flaticon.com/512/1055/1055666.png" },
-        { name: "Requirement Analysis", icon: "" },
-        { name: "Test Case Creation", icon: "" },
-        { name: "Bug Reporting", icon: "https://cdn-icons-png.flaticon.com/512/1828/1828843.png" },
+        { name: "Requirement Analysis", icon: reqAnalysisIcon },
+        { name: "Test Case Creation", icon: testCaseIcon },
+        { name: "Bug Reporting", icon: bugReportIcon },
         { name: "Jira", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg" },
         { name: "Confluence", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/confluence/confluence-original.svg" }
       ]
@@ -250,13 +257,13 @@ export const portfolioData: PortfolioData = {
         { name: "MySQL Workbench", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
         { name: "pgAdmin", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
         { name: "Bubble.io", icon: "https://cdn.worldvectorlogo.com/logos/bubble-io.svg" },
-        { name: "Redmine", icon: "https://logo.svgcdn.com/s/redmine.svg" },
-        { name: "FastStone", icon: "https://cdn-icons-png.flaticon.com/512/2991/2991110.png" },
-        { name: "OpenProject", icon: "https://www.openproject.org/assets/images/openproject_logo.png" }
+        { name: "Redmine", icon: redmineIcon },
+        { name: "FastStone", icon: faststoneIcon },
+        { name: "OpenProject", icon: "https://www.openproject.org/assets/images/press/openproject-icon-original-color-850606ea.svg" }
       ]
     },
     {
-      category: "AI/ML",
+      category: "AI/ML & Libraries",
       categoryIcon: "Brain",
       gradient: "from-orange-500 to-amber-600",
       items: [
