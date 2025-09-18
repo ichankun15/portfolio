@@ -1,5 +1,5 @@
-import React from 'react';
-import { portfolioData } from '@/data/portfolio';
+import React from "react";
+import { portfolioData } from "@/data/portfolio";
 
 const AboutSection: React.FC = () => {
   return (
@@ -9,7 +9,7 @@ const AboutSection: React.FC = () => {
           <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
             About Me
           </h2>
-          
+
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="modern-card p-8">
               <h3 className="text-2xl font-semibold mb-6 text-primary">
@@ -22,7 +22,7 @@ const AboutSection: React.FC = () => {
                 {portfolioData.tagline}
               </p>
             </div>
-            
+
             <div className="modern-card p-8">
               <h3 className="text-2xl font-semibold mb-6 text-accent">
                 Quick Facts
@@ -30,11 +30,15 @@ const AboutSection: React.FC = () => {
               <div className="space-y-4">
                 <div className="flex justify-between items-center py-2 border-b border-border/30">
                   <span className="font-medium">Location</span>
-                  <span className="text-muted-foreground">{portfolioData.location}</span>
+                  <span className="text-muted-foreground text-right break-words max-w-[60%] sm:max-w-[70%]">
+                    {portfolioData.location}
+                  </span>
                 </div>
                 <div className="flex justify-between items-center py-2 border-b border-border/30">
                   <span className="font-medium">Experience</span>
-                  <span className="text-muted-foreground">{portfolioData.years_exp}</span>
+                  <span className="text-muted-foreground">
+                    {portfolioData.years_exp}
+                  </span>
                 </div>
                 <div className="flex justify-between items-center py-2 border-b border-border/30">
                   <span className="font-medium">Projects Completed</span>
