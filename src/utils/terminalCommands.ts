@@ -80,7 +80,7 @@ export class TerminalCommandHandler {
       case "switch":
       case "modern":
         return [
-          { type: "output", content: "Switching to modern UI mode...", delay: 800 },
+          { type: "output", content: "Switching to interactive UI mode...", delay: 800 },
           { type: "output", content: "__SWITCH__" }, // Special flag for mode switch
         ];
 
