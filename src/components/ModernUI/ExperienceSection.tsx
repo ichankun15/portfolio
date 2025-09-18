@@ -38,8 +38,8 @@ const ExperienceSection: React.FC = () => {
                 <div className="mb-6">
                   <ul className="space-y-2">
                     {exp.description.map((desc, descIndex) => (
-                      <li key={descIndex} className="text-muted-foreground leading-relaxed flex items-start">
-                        <span className="text-accent mr-3 mt-2">•</span>
+                      <li key={descIndex} className="text-muted-foreground leading-relaxed flex items-center">
+                        <span className="text-accent mr-3 flex-shrink-0">•</span>
                         <span>{desc}</span>
                       </li>
                     ))}

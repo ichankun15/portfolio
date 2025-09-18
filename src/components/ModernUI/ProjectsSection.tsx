@@ -81,7 +81,7 @@ const ProjectsSection: React.FC = () => {
           <div className="text-center mt-12">
             <Button variant="outline" className="modern-btn-primary">
               <Github className="mr-2 h-5 w-5" />
-              View More on GitHub
+              <a href="https://github.com/ichankun15" target="_blank">View More on GitHub</a>
             </Button>
           </div>
         </div>

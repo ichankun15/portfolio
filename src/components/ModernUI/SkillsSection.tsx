@@ -81,7 +81,7 @@ const SkillsSection = () => {
               </h3>
               <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
                 Technology evolves rapidly, and I'm passionate about staying current with the latest trends and best practices. 
-                Currently exploring <span className="font-semibold text-blue-600 dark:text-blue-400">WebAssembly</span>, <span className="font-semibold text-purple-600 dark:text-purple-400">GraphQL</span>, and <span className="font-semibold text-teal-600 dark:text-teal-400">serverless architectures</span> to expand my skill set.
+                Currently exploring <span className="font-semibold text-blue-600 dark:text-blue-400">Express - TS</span>, <span className="font-semibold text-purple-600 dark:text-purple-400">GraphQL</span>, and <span className="font-semibold text-teal-600 dark:text-teal-400">serverless architectures</span> to expand my skill set.
               </p>
               
               <div className="flex justify-center items-center mt-8 space-x-4">
