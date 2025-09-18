@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import TerminalEmulator from '@/components/Terminal/TerminalEmulator';
+import { useState, useEffect } from 'react';
+import TerminalEmulator from '@/components/TerminalUI/TerminalEmulator';
 import ModernPortfolio from '@/components/ModernUI/ModernPortfolio';
 import ModeToggle from '@/components/ToggleUI/ModeToggle';
 import DarkMode from '@/components/ui/darkmode';

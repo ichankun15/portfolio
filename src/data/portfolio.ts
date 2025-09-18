@@ -60,7 +60,7 @@ export interface PortfolioData {
 }
 
 export const portfolioData: PortfolioData = {
-  name: "Ichan",
+  name: "iChan",
   title: "Software Engineer | Full Stack Developer",
   email: "1christian.villafuerte@gmail.com",
   phone: "09066454881",
