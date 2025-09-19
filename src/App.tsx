@@ -25,18 +25,18 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           {/* Terminal Mode Route */}
-          <Route path="/portfolio/terminal" element={<Terminal />} />
+          <Route path="/terminal" element={<Terminal />} />
           
           {/* Main Portfolio Routes */}
-          <Route path="/portfolio" element={<Layout />}>
+          <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
-            <Route path="/portfolio/about" element={<About />} />
-            <Route path="/portfolio/projects" element={<Projects />} />
-            <Route path="/portfolio/projects/:id" element={<ProjectDetail />} />
-            <Route path="/portfolio/experience" element={<Experience />} />
-            <Route path="/portfolio/skills" element={<Skills />} />
-            <Route path="/portfolio/education" element={<Education />} />
-            <Route path="/portfolio/contact" element={<Contact />} />
+            <Route path="about" element={<About />} />
+            <Route path="projects" element={<Projects />} />
+            <Route path="projects/:id" element={<ProjectDetail />} />
+            <Route path="experience" element={<Experience />} />
+            <Route path="skills" element={<Skills />} />
+            <Route path="education" element={<Education />} />
+            <Route path="contact" element={<Contact />} />
           </Route>
           
           {/* Catch-all route */}
