@@ -12,7 +12,7 @@ const Layout: React.FC = () => {
     setIsTransitioning(true);
     
     setTimeout(() => {
-      navigate('/portfolio/terminal');
+      navigate('/terminal');
       setIsTransitioning(false);
     }, 300);
   };

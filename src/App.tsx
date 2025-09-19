@@ -25,7 +25,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           {/* Terminal Mode Route */}
-          <Route path="/terminal" element={<Terminal />} />
+          <Route path="terminal" element={<Terminal />} />
           
           {/* Main Portfolio Routes */}
           <Route path="/" element={<Layout />}>
