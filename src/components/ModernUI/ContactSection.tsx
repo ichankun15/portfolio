@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { portfolioData } from "@/data/portfolio";
 import { Mail, Phone, MapPin, Send, Github, Linkedin } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
+import { useToast } from "@/hooks/useToast";
 
 const ContactSection: React.FC = () => {
   const [formData, setFormData] = useState({
