@@ -19,7 +19,7 @@ const ProjectDetail: React.FC = () => {
           <h1 className="text-4xl font-bold mb-4">Project Not Found</h1>
           <p className="text-muted-foreground mb-8">The project you're looking for doesn't exist.</p>
           <button
-            onClick={() => navigate('/portfolio/projects')}
+            onClick={() => navigate('/projects')}
             className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors mx-auto"
           >
             <ArrowLeft size={20} />
@@ -35,7 +35,7 @@ const ProjectDetail: React.FC = () => {
       {/* Back Button */}
       <div className="container mx-auto px-6">
         <button
-          onClick={() => navigate('/portfolio/projects')}
+          onClick={() => navigate('/projects')}
           className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-8"
         >
           <ArrowLeft size={20} />

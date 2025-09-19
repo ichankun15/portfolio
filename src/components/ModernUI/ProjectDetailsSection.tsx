@@ -165,7 +165,7 @@ const ProjectDetailsSection: React.FC<ProjectDetailsSectionProps> = ({ project }
             .map((relatedProject) => (
               <div
                 key={relatedProject.id}
-                onClick={() => navigate(`/portfolio/projects/${relatedProject.id}`)}
+                onClick={() => navigate(`/projects/${relatedProject.id}`)}
                 className="p-4 border border-border rounded-lg hover:bg-accent/5 transition-colors cursor-pointer"
               >
                 <h4 className="font-semibold mb-2 text-primary">{relatedProject.title}</h4>

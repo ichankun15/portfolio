@@ -24,15 +24,15 @@ const Navigation: React.FC<NavigationProps> = ({ onModeSwitch }) => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const navItems = [
-    { to: "/portfolio", label: "Home", icon: Home },
-    { to: "/portfolio/about", label: "About", icon: User },
-    { to: "/portfolio/experience", label: "Experience", icon: Briefcase },
-    { to: "/portfolio/projects", label: "Projects", icon: FolderOpen },
-    { to: "/portfolio/skills", label: "Skills", icon: Code },
-    { to: "/portfolio/education", label: "Education", icon: GraduationCap },
-    { to: "/portfolio/contact", label: "Contact", icon: Mail },
-  ];
+const navItems = [
+  { to: "/", label: "Home", icon: Home },
+  { to: "/about", label: "About", icon: User },
+  { to: "/experience", label: "Experience", icon: Briefcase },
+  { to: "/projects", label: "Projects", icon: FolderOpen },
+  { to: "/skills", label: "Skills", icon: Code },
+  { to: "/education", label: "Education", icon: GraduationCap },
+  { to: "/contact", label: "Contact", icon: Mail },
+];
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);

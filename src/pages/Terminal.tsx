@@ -12,7 +12,7 @@ const Terminal: React.FC = () => {
     setIsTransitioning(true);
     
     setTimeout(() => {
-      navigate('/portfolio');
+      navigate('/');
       setIsTransitioning(false);
     }, 300);
   };

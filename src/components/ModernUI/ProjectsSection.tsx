@@ -8,7 +8,7 @@ const ProjectsSection: React.FC = () => {
   const navigate = useNavigate();
 
   const handleViewProject = (projectId: string) => {
-    navigate(`/portfolio/projects/${projectId}`);
+    navigate(`/projects/${projectId}`);
   };
 
   return (
