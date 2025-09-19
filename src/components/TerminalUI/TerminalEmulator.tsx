@@ -374,7 +374,7 @@
 
 import React from "react";
 import { portfolioData } from "@/data/portfolio";
-import { useTerminal } from "../../hooks/userTerminal";
+import { useTerminal } from "../../hooks/useTerminal";
 import { TerminalEmulatorProps } from "../../types/terminal";
 import { TerminalHeader } from "./TerminalHeader";
 import { TerminalLine } from "./TerminalLine";

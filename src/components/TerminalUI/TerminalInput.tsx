@@ -17,12 +17,9 @@ export const TerminalInput: React.FC<TerminalInputProps> = ({
   onChange,
   onKeyDown,
 }) => (
-  <form onSubmit={onSubmit} className="terminal-line">
+  <form onSubmit={onSubmit} className="terminal-line flex items-center">
     <span className="terminal-prompt">
-      <span className="hidden sm:inline">
         {username.toLowerCase().replace(" ", "")}@portfolio:~$
-      </span>
-      <span className="sm:hidden">$</span>
     </span>
     <input
       ref={inputRef}
@@ -30,7 +27,7 @@ export const TerminalInput: React.FC<TerminalInputProps> = ({
       value={currentInput}
       onChange={(e) => onChange(e.target.value)}
       onKeyDown={onKeyDown}
-      className="terminal-input border-0 focus:outline-none bg-transparent text-current w-full"
+      className="terminal-input border-0 focus:outline-none bg-transparent text-white w-full"
       autoComplete="off"
       spellCheck="false"
     />

@@ -67,70 +67,41 @@ const DarkMode: React.FC<DarkModeProps> = ({ className = '' }) => {
   const getThemeIcon = (): JSX.Element => {
     switch (theme) {
       case 'light':
-        return <Sun className="w-4 h-4 text-orange-500" />;
+        return <Sun className="w-3 h-3 text-orange-500" />;
       case 'system':
-        return <Monitor className="w-4 h-4 text-blue-500" />;
+        return <Monitor className="w-3 h-3 text-blue-500" />;
       case 'dark':
-        return <Moon className="w-4 h-4 text-indigo-600" />;
+        return <Moon className="w-3 h-3 text-indigo-600" />;
       default:
-        return <Sun className="w-4 h-4" />;
+        return <Sun className="w-3 h-3" />;
     }
   };
 
   return (
-    <div className="fixed top-6 left-6 z-50">
-      <div className="flex items-center space-x-3 px-6 py-3">
+    // REMOVED: fixed positioning - now uses relative positioning for navbar integration
+    <div className={`flex items-center ${className}`}>
+      {/* Compact Toggle Button */}
+      <button
+        onClick={cycleTheme}
+        className="relative w-10 h-10 rounded-lg bg-muted/30 hover:bg-muted/50 transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-primary/50 flex items-center justify-center group"
+        title={`Current: ${theme}${theme === 'system' ? ` (${systemTheme})` : ''}`}
+        type="button"
+        aria-label={`Toggle theme. Current: ${theme}`}
+      >
+        {/* Background with theme color */}
+        <div className={`absolute inset-1 rounded-md transition-all duration-300 ${
+          theme === 'light' 
+            ? 'bg-gradient-to-br from-yellow-400/20 to-orange-400/20' 
+            : theme === 'system'
+            ? 'bg-gradient-to-br from-blue-400/20 to-purple-400/20'
+            : 'bg-gradient-to-br from-indigo-500/20 to-purple-600/20'
+        }`} />
         
-        {/* Toggle Track */}
-        <div className="relative">
-          <div className="flex items-center space-x-1">
-            <Sun className="w-4 h-4 text-muted-foreground" />
-            <Monitor className="w-4 h-4 text-muted-foreground" />
-            <Moon className="w-4 h-4 text-muted-foreground" />
-          </div>
-          
-          {/* Toggle Button */}
-          <button
-            onClick={cycleTheme}
-            className="absolute top-1/2 -translate-y-1/2 w-20 h-8 rounded-full bg-muted/30 transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-primary/50 overflow-hidden"
-            title={`Current: ${theme}${theme === 'system' ? ` (${systemTheme})` : ''}`}
-            type="button"
-            aria-label={`Toggle theme. Current: ${theme}`}
-          >
-            {/* Track Background */}
-            <div className={`absolute inset-0 rounded-full transition-all duration-300 ${
-              theme === 'light' 
-                ? 'bg-gradient-to-r from-yellow-400 to-orange-400' 
-                : theme === 'system'
-                ? 'bg-gradient-to-r from-blue-400 to-purple-400'
-                : 'bg-gradient-to-r from-indigo-500 to-purple-600'
-            }`} />
-            
-            {/* Sliding Circle */}
-            <div
-              className={`absolute top-1 w-6 h-6 bg-white rounded-full shadow-md transform transition-transform duration-300 ease-in-out flex items-center justify-center ${
-                theme === 'light' 
-                  ? 'translate-x-1' 
-                  : theme === 'system'
-                  ? 'translate-x-7'
-                  : 'translate-x-[52px]'
-              }`}
-            >
-              {getThemeIcon()}
-            </div>
-          </button>
+        {/* Icon */}
+        <div className="relative z-10 group-hover:scale-110 transition-transform duration-200">
+          {getThemeIcon()}
         </div>
-        
-        {/* Theme Labels */}
-        <div className="flex flex-col text-xs text-muted-foreground">
-          <span className={`transition-colors duration-200 ${theme === 'light' ? 'text-primary font-semibold' : ''}`}>
-          </span>
-          <span className={`transition-colors duration-200 ${theme === 'system' ? 'text-primary font-semibold' : ''}`}>
-          </span>
-          <span className={`transition-colors duration-200 ${theme === 'dark' ? 'text-primary font-semibold' : ''}`}>
-          </span>
-        </div>
-      </div>
+      </button>
     </div>
   );
 };

@@ -13,18 +13,20 @@ const ModeToggle: React.FC<ModeToggleProps> = ({ isTerminalMode, onToggle }) => 
       onClick={onToggle}
       variant="outline"
       size="lg"
-      className="mode-toggle group"
+      className="group shadow-lg"
       title={isTerminalMode ? 'Switch to Modern UI' : 'Switch to Terminal Mode'}
     >
       {isTerminalMode ? (
         <>
           <Monitor className="h-5 w-5 mr-2 group-hover:scale-110 transition-transform" />
-          Interactive UI
+          <span className="hidden sm:inline">Interactive UI</span>
+          <span className="sm:hidden">UI Mode</span>
         </>
       ) : (
         <>
           <Terminal className="h-5 w-5 mr-2 group-hover:rotate-12 transition-transform" />
-          CLI mode
+          <span className="hidden sm:inline">CLI Mode</span>
+          <span className="sm:hidden">CLI</span>
         </>
       )}
     </Button>

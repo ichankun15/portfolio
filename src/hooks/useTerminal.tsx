@@ -2,6 +2,8 @@
 import { useState, useEffect, useRef } from 'react';
 import { TerminalLine, PortfolioData } from '../types/terminal';
 import { TerminalCommandHandler } from '../utils/terminalCommands';
+import resumeFile from "@/assets/resume.pdf";
+
 
 interface useTerminalProps {
   portfolioData: PortfolioData;
@@ -107,7 +109,7 @@ export const useTerminal = ({ portfolioData, onModeSwitch }: useTerminalProps) =
 
         // Handle special actions after output
         if (trimmedCommand === "resume") {
-          window.open("/resume.pdf", "_blank", "noopener,noreferrer");
+          window.open(resumeFile, "_blank", "noopener,noreferrer");
         }
         
         if (shouldSwitch) {

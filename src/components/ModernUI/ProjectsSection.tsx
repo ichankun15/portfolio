@@ -1,9 +1,16 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { portfolioData } from '@/data/portfolio';
 import { Button } from '@/components/ui/button';
-import { ExternalLink, Github, Sparkles } from 'lucide-react';
+import { ExternalLink, Github, Sparkles, Eye } from 'lucide-react';
 
 const ProjectsSection: React.FC = () => {
+  const navigate = useNavigate();
+
+  const handleViewProject = (projectId: string) => {
+    navigate(`/portfolio/projects/${projectId}`);
+  };
+
   return (
     <section className="modern-section bg-background/50">
       <div className="modern-container">
@@ -45,34 +52,49 @@ const ProjectsSection: React.FC = () => {
                   )}
                 </div>
                 
-                <div className="flex space-x-3">
-                  {project.github && (
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="flex-1 hover:bg-primary/10 hover:border-primary"
-                      asChild
-                    >
-                      <a href={project.github} target="_blank" rel="noopener noreferrer">
-                        <Github className="h-4 w-4 mr-2" />
-                        Code
-                      </a>
-                    </Button>
-                  )}
+                {/* Project Actions */}
+                <div className="space-y-3">
+                  {/* View Details Button */}
+                  <Button
+                    onClick={() => handleViewProject(project.id)}
+                    variant="default"
+                    size="sm"
+                    className="w-full bg-primary hover:bg-primary/90"
+                  >
+                    <Eye className="h-4 w-4 mr-2" />
+                    View Details
+                  </Button>
                   
-                  {project.demo && (
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="flex-1 hover:bg-accent/10 hover:border-accent"
-                      asChild
-                    >
-                      <a href={project.demo} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink className="h-4 w-4 mr-2" />
-                        Demo
-                      </a>
-                    </Button>
-                  )}
+                  {/* External Links */}
+                  <div className="flex space-x-3">
+                    {project.github && (
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="flex-1 hover:bg-primary/10 hover:border-primary"
+                        asChild
+                      >
+                        <a href={project.github} target="_blank" rel="noopener noreferrer">
+                          <Github className="h-4 w-4 mr-2" />
+                          Code
+                        </a>
+                      </Button>
+                    )}
+                    
+                    {project.demo && (
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="flex-1 hover:bg-accent/10 hover:border-accent"
+                        asChild
+                      >
+                        <a href={project.demo} target="_blank" rel="noopener noreferrer">
+                          <ExternalLink className="h-4 w-4 mr-2" />
+                          Demo
+                        </a>
+                      </Button>
+                    )}
+                  </div>
                 </div>
               </div>
             ))}
