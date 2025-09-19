@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { Terminal, Download, Github, Linkedin, Mail } from "lucide-react";
 import { portfolioData } from "@/data/portfolio";
+import resumeFile from "@/assets/resume.pdf";
 
 interface HeroSectionProps {
   onModeSwitch: () => void;
@@ -48,7 +49,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onModeSwitch }) => {
             </Button>
 
             <a
-              href="/resume.pdf"
+              href={resumeFile}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto"
