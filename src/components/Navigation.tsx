@@ -44,9 +44,9 @@ const navItems = [
 
   // Custom function to check if a link is active
   const isLinkActive = (to: string) => {
-    if (to === "/portfolio") {
-      // For home page, only active if exactly matching /portfolio
-      return location.pathname === "/portfolio";
+    if (to === "/") {
+      // For home page, only active if exactly matching /
+      return location.pathname === "/";
     }
     // For other pages, check if current path starts with the link path
     return location.pathname.startsWith(to);
@@ -59,7 +59,7 @@ const navItems = [
         {/* Left: Logo/Branding */}
         <div className="flex items-center gap-2">
           <NavLink
-            to="/portfolio"
+            to="/"
             className="flex items-center gap-2 text-lg font-semibold"
           >
             {/* <Home size={20} /> */}
@@ -72,7 +72,7 @@ const navItems = [
             <NavLink
               key={to}
               to={to}
-              end={to === "/portfolio"} // exact match for home
+              end={to === "/"} // exact match for home
               className={({ isActive }) =>
                 `relative group flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                   isActive
@@ -113,7 +113,7 @@ const navItems = [
       <nav className="lg:hidden flex items-center justify-between w-full">
         {/* Logo/Brand */}
         <NavLink
-          to="/portfolio"
+          to="/"
           className="flex items-center gap-2 text-lg font-semibold"
         >
           {/* <Home size={20} /> */}
@@ -143,7 +143,7 @@ const navItems = [
             {/* Mobile Menu Header */}
             <div className="flex items-center justify-between mb-8">
               <NavLink
-                to="/portfolio"
+                to="/"
                 className="flex items-center gap-2 text-lg font-semibold"
                 onClick={closeMobileMenu}
               >
@@ -167,7 +167,7 @@ const navItems = [
                 <NavLink
                   key={to}
                   to={to}
-                  end={to === "/portfolio"}
+                  end={to === "/"}
                   onClick={closeMobileMenu}
                   className={({ isActive }) =>
                     `flex items-center gap-3 px-4 py-3 rounded-lg text-base font-medium transition-all duration-200 w-full ${
