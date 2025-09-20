@@ -22,6 +22,8 @@ export interface Experience {
   period: string;
   description: string[];
   tech: string[];
+  workSetup: string;
+  workType?: string;
 }
 
 export interface SkillItem {
@@ -105,46 +107,28 @@ export const portfolioData: PortfolioData = {
     }
   ],
 
-  experience: [
+   experience: [
     {
       id: "software-engineer-1",
       title: "Software Engineer I",
       company: "Tsukiden Global Solutions Inc.",
-      period: "April 2024 – Present",
+      period: "April 2024 – September 2025",
       description: [
-        "Developed internal applications using Java Spring Boot or Python (Django/FastAPI) and React, integrating with MySQL/PostgreSQL databases.",
-        "Designed and implemented RESTful APIs for scalable backend services.",
-        "Explored serverless deployments on AWS Lambda with DynamoDB.",
-        "Built AI/ML apps (Color Season Analyzer with TensorFlow, Mediapipe, Flutter).",
-        "Developed Generative AI-powered test automation tool with FastAPI, AWS, and React.",
-        "Conducted QA training with Selenium and automation scripts."
+        "Promoted from Design Engineer Trainee to Software Engineer I after successful completion of training program.",
+        "Developed internal applications using Java Spring Boot or Python (Django/FastAPI) and React, integrating with MySQL and PostgreSQL databases to build scalable, RESTful backend services.",
+        "Completed internal training on Spring Boot and Microservices architecture, focusing on scalable backend systems.",
+        "Built a Java-based messaging app supporting both TCP/UDP protocols, showcasing skills in multithreading and socket programming.",
+        "Created a no-code office room booking system using Bubble.io, streamlining workspace scheduling with an intuitive UI.",
+        "Explored serverless deployments with Serverless Framework on AWS Lambda, optimizing cost and scalability; experimented with DynamoDB for NoSQL design.",
+        "Undertook AI/Machine Learning training, developing a Color Season Analyzer app by training models with Scikit-learn, TensorFlow and Keras; applied Mediapipe for facial feature extraction, leveraging Google Colab for experimentation, and building the UI with Flutter and Firebase.",
+        "Engaged in Generative AI training, utilizing AWS services and FastAPI to build a test automation tool that generates test scenarios, test cases, and Robot Framework scripts; developed the web UI with React.",
+        "Conducted practice automation scripts using Selenium during QA training.",
+        "PROJECT: Software Monitoring Tool (Dev Role) - Worked within an Agile Scrum development environment, actively participating in sprint planning, stand-ups, and sprint reviews. Contributed to feature development including CSV-driven database automation (updates/deletions), bulk data manipulation, and ETL/data migration scripts to enhance backend functionality. Implemented UI component updates based on requirement needs and maintained the user guide. Created Integration Test Specs (ITS) / IT POVs to support integration and regression testing. Handled GitLab tasks such as creating branches, submitting merge requests (MRs), and merging source code for new feature implementations. Utilized Docker, SMTP, and Linux environments (via WSL) for backend testing and server environment access.",
+        "PROJECT: Travel Booking App (QA Role) - Created Test Patterns, Matrices, and Test Cases for manual UI and functional testing of a cross-platform travel app. Performed backend test data management and validation. Investigated and reported bugs using Jira. Documented testing processes, results, and bug reports in Confluence and Redmine for team collaboration and knowledge sharing."
       ],
-      tech: ["Java", "Spring Boot", "FastAPI", "Django", "React", "MySQL", "PostgreSQL", "AWS", "TensorFlow", "Keras", "Mediapipe", "Flutter", "Firebase"]
-    },
-    {
-      id: "software-monitoring-tool",
-      title: "Software Developer (Project: Software Monitoring Tool)",
-      company: "Tsukiden Global Solutions Inc.",
-      period: "2024",
-      description: [
-        "Enhanced backend functionality with CSV-driven automation and ETL scripts.",
-        "Implemented UI component updates per client requirements.",
-        "Wrote integration test specs and maintained user guide.",
-        "Worked in Agile Scrum environment with OpenProject and GitLab."
-      ],
-      tech: ["Python", "Django", "PostgreSQL", "Docker", "GitLab", "OpenProject", "HTML", "CSS", "JavaScript"]
-    },
-    {
-      id: "travel-booking-app",
-      title: "QA Engineer (Project: Travel Booking App)",
-      company: "Tsukiden Global Solutions Inc.",
-      period: "2024",
-      description: [
-        "Created test cases for manual UI and functional testing of a cross-platform travel app.",
-        "Performed backend test data management and validation.",
-        "Reported bugs using Jira and documented processes in Confluence and Redmine."
-      ],
-      tech: ["Jira", "Confluence", "Redmine", "Excel", "FastStone"]
+      tech: ["Java", "Spring Boot", "FastAPI", "Django", "React", "MySQL", "PostgreSQL", "AWS", "Serverless Framework", "DynamoDB", "TensorFlow", "Keras", "Scikit-learn", "Mediapipe", "Google Colab", "Flutter", "Firebase", "Bubble.io", "Robot Framework", "Selenium", "Postman", "Python", "Docker", "GitLab", "OpenProject", "HTML", "CSS", "JavaScript", "SMTP", "Linux", "WSL", "Jira", "Confluence", "Redmine", "Excel", "FastStone"],
+      workSetup: "Hybrid",
+      workType: "Full-Time"
     },
     {
       id: "design-trainee",
@@ -152,11 +136,14 @@ export const portfolioData: PortfolioData = {
       company: "Tsukiden Global Solutions Inc.",
       period: "October 2023 – April 2024",
       description: [
-        "Completed in-house training on C Analysis/Inspection and Software Testing.",
-        "Developed a full-stack e-learning application as a training project.",
-        "Engaged in requirements analysis and system design tasks."
+        "Completed comprehensive in-house training on C Analysis/Inspection and Software Testing.",
+        "Developed a full-stack e-learning application as a capstone training project, covering the complete SDLC.",
+        "Engaged in requirements analysis and system design tasks.",
+        "Successfully completed training program, leading to promotion to Software Engineer I position."
       ],
-      tech: ["React", "Spring Boot", "MySQL", "Bootstrap", "GitHub", "Postman", "Jira"]
+      tech: ["React", "Spring Boot", "MySQL", "Bootstrap", "GitHub", "Postman", "Jira"],
+      workSetup: "Onsite",
+      workType: "Full-time"
     },
     {
       id: "intern-agora",
@@ -167,7 +154,9 @@ export const portfolioData: PortfolioData = {
         "Created and executed UAT test cases for web and mobile e-commerce platforms.",
         "Designed mockup UI/UX for the e-commerce app using Figma."
       ],
-      tech: ["Figma", "UAT Testing", "Manual QA"]
+      tech: ["Figma", "UAT Testing", "Manual QA"],
+      workSetup: "Remote",
+      workType: "Internship"
     }
   ],
   // use devicon, svgrepo, freepik for icons
